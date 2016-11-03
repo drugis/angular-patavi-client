@@ -20,7 +20,7 @@ define(['angular'], function(angular) {
       }
 
       taskPromise.then(function(taskUrl) {
-        return $http.get(taskUrl);
+        return $http.get(taskUrl, { withCredentials: true });
       }, reportError).then(function(response) {
         if (!response.data || !response.data._links || !response.data._links.updates) {
           return resultsPromise.reject({ 'status': 'error', 'error': 'Patavi returned a malformed response' });
@@ -35,7 +35,7 @@ define(['angular'], function(angular) {
         }
 
         var socket = new WebSocket(response.data._links.updates.href);
-        socket.onmessage = function (event) {
+        socket.onmessage = function(event) {
           var data = JSON.parse(event.data);
           if (data.eventType === "done") {
             socket.close();
