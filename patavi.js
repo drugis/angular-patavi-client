@@ -10,7 +10,7 @@ define(['angular'], function(angular) {
       var resultsPromise = $q.defer();
 
       function getResults(url, done) {
-        $http.get(url).then(function(response) {
+        $http.get(url, { withCredentials: true }).then(function(response) {
           done(response.data);
         });
       }
