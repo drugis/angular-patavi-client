@@ -20,7 +20,7 @@ define(['angular'], function(angular) {
       }
 
       taskPromise.then(function(taskUrl) {
-        return $http.get(taskUrl);
+        return $http.get(taskUrl, { withCredentials: true });
       }, reportError).then(function(response) {
         if (!response.data || !response.data._links || !response.data._links.updates) {
           return resultsPromise.reject({ 'status': 'error', 'error': 'Patavi returned a malformed response' });
