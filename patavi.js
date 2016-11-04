@@ -45,7 +45,7 @@ define(['angular'], function(angular) {
             getResults(data.eventData.href, resultsPromise.reject);
           }
           resultsPromise.notify(data);
-        }
+        };
       }, reportError);
 
       return resultsPromise.promise;

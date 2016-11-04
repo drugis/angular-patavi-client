@@ -1,8 +1,9 @@
 {
   "name": "angular-patavi-client",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "authors": [
-    "Gert van Valkenhoef <g.h.m.van.valkenhoef@rug.nl>"
+    "Gert van Valkenhoef <g.h.m.van.valkenhoef@rug.nl>",
+    "Daan Reid <osmosisch@gmail.com>"
   ],
   "description": "Angular client for Patavi",
   "main": "patavi.js",
