@@ -11,10 +11,7 @@ define(['angular'], function(angular) {
 
       function getResults(url, done) {
         $http.get(url, {
-          withCredentials: true,
-          headers: {
-            'Access-Control-Allow-Credentials': true
-          }
+          withCredentials: true
         }).then(function(response) {
           done(response.data);
         });
