@@ -23,10 +23,7 @@ define(['angular'], function(angular) {
 
       taskPromise.then(function(taskUrl) {
         return $http.get(taskUrl, {
-          withCredentials: true,
-          headers: {
-            'Access-Control-Allow-Credentials': true
-          }
+          withCredentials: true
         });
       }, reportError).then(function(response) {
         if (!response.data || !response.data._links || !response.data._links.updates) {
