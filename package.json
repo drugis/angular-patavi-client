@@ -1,8 +1,8 @@
 {
   "name": "angular-patavi-client",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "dependencies": {
-    "angular": "~1.6.6"
+    "angular": "~1.7.9"
   },
   "main": "patavi.js",
   "engines": {
